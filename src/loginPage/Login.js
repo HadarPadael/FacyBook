@@ -4,9 +4,9 @@ import "./Login.css";
 function Login() {
   return (
     <div className="container text-center">
-      <div className="row align-items-start">
+      <div className="row">
         <div className="col">
-          <div className="card shadow rounded">
+          <div id="card" className="card shadow rounded">
             <div className="card-body">
               <InputComponent type={"text"} placeholder={"Username"} />
               <InputComponent type={"password"} placeholder={"Password"} />

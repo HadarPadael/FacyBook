@@ -1,0 +1,24 @@
+.card {
+    width: 500px;
+    height:700px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    display:flex;
+    text-align: center;
+}
+#appName{
+    margin-bottom: 1rem;
+}
+#InstructionLabel{
+    padding: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2{
+    font-family: inherit;
+    font-weight: bold;
+}
+h4{
+    font-family: inherit;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}

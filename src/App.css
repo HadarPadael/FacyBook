@@ -4,7 +4,9 @@ body{
 #appName {
     padding: 5px;
     color: blue;
-    font-family: inherit;
     font-weight: bold;
     font-size: 80px;
+}
+*{
+    font-family: inherit;
 }
