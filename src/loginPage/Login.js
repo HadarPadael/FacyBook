@@ -1,12 +1,13 @@
 import InputComponent from "./InputComponent";
 import "./Login.css";
 
+
 function Login() {
   return (
     <div className="container text-center">
       <div className="row">
         <div className="col">
-          <div id="card" className="card shadow rounded">
+          <div id="card" className="card shadow-lg rounded">
             <div className="card-body">
               <InputComponent type={"text"} placeholder={"Username"} />
               <InputComponent type={"password"} placeholder={"Password"} />
@@ -30,7 +31,7 @@ function Login() {
         </div>
         <div className="col">
           <h1 id="appName">facybook</h1>
-          <h2>we are happy that you're back!</h2>
+          <h2>We are happy that you're back!</h2>
         </div>
       </div>
     </div>
