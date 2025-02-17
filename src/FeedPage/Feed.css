@@ -6,6 +6,8 @@ img{
     padding: 10px;
     border-radius: 50%;
     object-fit: cover;
+    padding-bottom: 15px;
+    padding-top: 5px;
 }
 #searchBox{
     width: 30%;
@@ -14,10 +16,10 @@ img{
 }
 p{
    font-size: 25px;
+   padding: 10px;
 }
 .icon-button{
     border: none;
-    margin-top: 50%;
     align-items: center;
     background-color: #f8f9fa;;
 }
@@ -29,4 +31,14 @@ p{
 input{
     background: url('../../public/search.svg') no-repeat 0.5rem center;
     padding-left: 3rem !important;
+}
+.dropdown-toggle::after {
+    display: none !important;
+    content: none !important;
+}
+.nav-link{
+    align-items:flex-end;
+}
+.col{
+    align-self: baseline;
 }

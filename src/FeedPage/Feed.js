@@ -18,10 +18,14 @@ function Feed() {
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
-              <div class="d-flex align-items-center gap-3">
+              <div class="d-flex align-items-center gap-4">
                 <div class="row">
                   <div class="col">
-                    <img src="/profilePic.jpg" alt="profilePic" />
+                    <li class="nav-item">
+                      <button className="icon-button">
+                        <img src="/profilePic.jpg" alt="profilePic" />
+                      </button>
+                    </li>
                   </div>
                   <div class="col">
                     <li class="nav-item">
@@ -44,7 +48,7 @@ function Feed() {
                       </button>
                     </li>
                   </div>
-                  <div class="col">
+                  <div id="menuCol" class="col">
                     <li class="nav-item dropdown">
                       <a
                         class="nav-link dropdown-toggle"
