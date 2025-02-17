@@ -16,7 +16,7 @@ function Login() {
               </a>
               <div id="liveAlertPlaceholder"></div>
               <button
-                type="button"
+                type="button"s
                 className="btn btn-primary"
                 id="liveAlertBtn"
               >

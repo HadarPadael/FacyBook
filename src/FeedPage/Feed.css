@@ -23,11 +23,6 @@ p{
     align-items: center;
     background-color: #f8f9fa;;
 }
-.nav-link{
-    border: none;
-    margin-top: 5%;
-    background-color: #f8f9fa;
-}
 input{
     background: url('../../public/search.svg') no-repeat 0.5rem center;
     padding-left: 3rem !important;
@@ -36,9 +31,20 @@ input{
     display: none !important;
     content: none !important;
 }
-.nav-link{
-    align-items:flex-end;
-}
 .col{
     align-self: baseline;
+}
+.card{
+    height: 150%;
+}
+#LeftCol{
+    align-self:flex-start;
+}
+#navbarContainer{
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+#UnderNavContainer{
+    position:relative;
+    margin-top: 4%;
 }
