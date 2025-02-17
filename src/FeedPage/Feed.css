@@ -1,0 +1,32 @@
+button{
+    margin: 5px;
+}
+img{
+    width: 80px;
+    padding: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#searchBox{
+    width: 30%;
+    border-color: black;
+    border-width: 100px;
+}
+p{
+   font-size: 25px;
+}
+.icon-button{
+    border: none;
+    margin-top: 50%;
+    align-items: center;
+    background-color: #f8f9fa;;
+}
+.nav-link{
+    border: none;
+    margin-top: 5%;
+    background-color: #f8f9fa;
+}
+input{
+    background: url('../../public/search.svg') no-repeat 0.5rem center;
+    padding-left: 3rem !important;
+}
