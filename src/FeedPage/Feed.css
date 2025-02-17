@@ -1,7 +1,8 @@
-button{
+button {
     margin: 5px;
 }
-img{
+
+img {
     width: 80px;
     padding: 10px;
     border-radius: 50%;
@@ -9,42 +10,83 @@ img{
     padding-bottom: 15px;
     padding-top: 5px;
 }
-#searchBox{
+
+#searchBox {
     width: 30%;
     border-color: black;
     border-width: 100px;
 }
-p{
-   font-size: 25px;
-   padding: 10px;
+
+p {
+    font-size: 25px;
+    padding: 10px;
 }
-.icon-button{
+
+.icon-button {
     border: none;
     align-items: center;
-    background-color: #f8f9fa;;
+    background-color: #f8f9fa;
+    ;
 }
-input{
+
+input {
     background: url('../../public/search.svg') no-repeat 0.5rem center;
     padding-left: 3rem !important;
 }
+
 .dropdown-toggle::after {
     display: none !important;
     content: none !important;
 }
-.col{
+
+.col {
     align-self: baseline;
 }
-.card{
+
+.card {
     height: 150%;
 }
-#LeftCol{
-    align-self:flex-start;
+
+#LeftCol {
+    align-self: flex-start;
+    overflow-y: scroll
 }
-#navbarContainer{
+#RightCol{
+    overflow-y: scroll
+}
+#navbarContainer {
     padding-top: 0px;
     margin-bottom: 0px;
 }
-#UnderNavContainer{
-    position:relative;
+
+#UnderNavContainer {
+    position: relative;
     margin-top: 4%;
+}
+
+h6 {
+    padding: 0px;
+    margin: 0px;
+}
+
+#friendReqPic {
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+h3{
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.list-group-item{
+    background-color: whitesmoke !important;
+    border-color: whitesmoke !important;
+}
+h4{
+    text-align: start;
+    font-weight: bold;
+    padding: 0px;
+    padding-bottom: 2px;
+    margin: 0px;
 }
