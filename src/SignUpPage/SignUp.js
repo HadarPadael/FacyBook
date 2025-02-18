@@ -1,4 +1,4 @@
-import InputComponentsList from "./InputComponents";
+import SignUpList from "./SignUpList";
 import "./SignUp.css";
 
 function SignUp() {
@@ -13,7 +13,7 @@ function SignUp() {
           <h4>It's fast and easy.</h4>
           <hr />
           <form class="row g-3">
-            {InputComponentsList}
+            {SignUpList}
             <div className="mb-3">
               <label id="InstructionLabel">
                 please choose a profile picture

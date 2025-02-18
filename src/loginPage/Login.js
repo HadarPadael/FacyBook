@@ -1,6 +1,5 @@
-import InputComponent from "./InputComponent";
 import "./Login.css";
-
+import LogInList from "./LogInList";
 
 function Login() {
   return (
@@ -9,14 +8,14 @@ function Login() {
         <div className="col">
           <div id="card" className="card shadow-lg rounded">
             <div className="card-body">
-              <InputComponent type={"text"} placeholder={"Username"} />
-              <InputComponent type={"password"} placeholder={"Password"} />
+              {LogInList}
               <a href="#" className="btn btn-primary d-grid">
                 log in
               </a>
               <div id="liveAlertPlaceholder"></div>
               <button
-                type="button"s
+                type="button"
+                s
                 className="btn btn-primary"
                 id="liveAlertBtn"
               >

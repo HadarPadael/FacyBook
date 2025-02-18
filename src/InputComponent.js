@@ -1,6 +1,6 @@
-function InputComponent({ type, placeholder }) {
+function InputComponent({ type, placeholder, classType }) {
   return (
-    <div class="mb-3">
+    <div className={classType}>
       <input type={type} class="form-control" placeholder={placeholder} />
     </div>
   );
