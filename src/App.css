@@ -10,3 +10,7 @@ body{
 *{
     font-family: inherit;
 }
+hr{
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}

@@ -26,7 +26,6 @@ p {
     border: none;
     align-items: center;
     background-color: #f8f9fa;
-    ;
 }
 
 input {
@@ -41,10 +40,6 @@ input {
 
 .col {
     align-self: baseline;
-}
-
-.card {
-    height: 150%;
 }
 
 #LeftCol {
@@ -88,7 +83,7 @@ h3 {
     border-color: whitesmoke !important;
 }
 
-h4 {
+.contacts h4 {
     text-align: start;
     font-weight: bold;
     padding: 0px;
@@ -100,6 +95,9 @@ h4 {
     width: 80%;
     height: 5%;
     align-self: center;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    padding: 15px;
 }
 
 #postContent {
@@ -117,13 +115,36 @@ h4 {
     margin-top: 0px;
     border-radius: 0px;
 }
-#postUserName{
-   font-weight: bold;
+
+#postUserName {
+    font-weight: bold;
 }
-#upperName{
+
+#upperName {
     padding-top: 3% !important;
 }
-#upperTime{
+
+#upperTime {
     padding-top: 0px !important;
     margin-top: 0px;
+}
+
+#postText {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.reactionBtn {
+    font-weight: bold;
+    font-size: medium;
+    background-color: white;
+}
+
+#editBtn {
+    background-color: whitesmoke;
+    margin-top: 10px;
+    font-size: larger;
+}
+.list-group-item {
+    list-style: none;
 }

@@ -1,4 +1,4 @@
-function MenuComponent() {
+function MenuComponent({option1, option2, option3, icon}) {
   return (
     <li className="nav-item dropdown">
       <a
@@ -8,17 +8,17 @@ function MenuComponent() {
         data-bs-toggle="dropdown"
         aria-expanded="false"
       >
-        <p className="bi bi-list"></p>
+        <p className={icon}></p>
       </a>
       <ul className="dropdown-menu">
         <li>
           <a className="dropdown-item" href="#">
-            Action
+            {option1}
           </a>
         </li>
         <li>
           <a className="dropdown-item" href="#">
-            Another action
+            {option2}
           </a>
         </li>
         <li>
@@ -26,7 +26,7 @@ function MenuComponent() {
         </li>
         <li>
           <a className="dropdown-item" href="#">
-            Something else here
+            {option3}
           </a>
         </li>
       </ul>

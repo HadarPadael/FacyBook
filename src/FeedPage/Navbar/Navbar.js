@@ -3,7 +3,10 @@ import NavbarButtonsList from "./NavbarButtonsList";
 
 function Navbar() {
   return (
-    <nav id= "navbarContainer" className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav
+      id="navbarContainer"
+      className="navbar navbar-expand-lg bg-body-tertiary fixed-top"
+    >
       <div className="container-fluid shadow">
         <button
           className="navbar-toggler"
@@ -20,7 +23,12 @@ function Navbar() {
               <div className="row">
                 {NavbarButtonsList}
                 <div className="col">
-                  <MenuComponent />
+                  <MenuComponent
+                    option1={"Create new post"}
+                    option2={"See profile"}
+                    option3={"Log out"}
+                    icon={"bi bi-list"}
+                  />
                 </div>
               </div>
             </div>
