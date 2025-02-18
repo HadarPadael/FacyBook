@@ -1,17 +1,15 @@
 import "./Login.css";
-import LogInList from "./LogInList";
+import ValidateLogin from "./InteractionLogic/ValidateLogin";
+import ToSignUp from "./InteractionLogic/ToSignUp";
 
-function Login() {
+function Login({ setIsLoggedIn }) {
   return (
     <div className="container text-center">
       <div className="row">
         <div className="col">
           <div id="card" className="card shadow-lg rounded">
             <div className="card-body">
-              {LogInList}
-              <a href="#" className="btn btn-primary d-grid">
-                log in
-              </a>
+              <ValidateLogin setIsLoggedIn={setIsLoggedIn} />
               <div id="liveAlertPlaceholder"></div>
               <button
                 type="button"
@@ -22,9 +20,7 @@ function Login() {
                 forgot password?
               </button>
               <hr />
-              <a href="#" id="sign-up-btn" className="btn btn-success">
-                Sign up
-              </a>
+              <ToSignUp />
             </div>
           </div>
         </div>

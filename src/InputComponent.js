@@ -1,7 +1,7 @@
-function InputComponent({ type, placeholder, classType }) {
+function InputComponent({ type, placeholder, classType, onChange }) {
   return (
     <div className={classType}>
-      <input type={type} class="form-control" placeholder={placeholder} />
+      <input type={type} className="form-control" placeholder={placeholder} onChange={onChange} />
     </div>
   );
 }

@@ -14,3 +14,9 @@ hr{
     margin-left: 10px !important;
     margin-right: 10px !important;
 }
+.error{
+    font-weight: lighter;
+    color: red;
+    padding-bottom: 2px;
+    text-align: start;
+}

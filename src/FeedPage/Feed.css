@@ -1,4 +1,4 @@
-button {
+div>button {
     margin: 5px;
 }
 
@@ -28,7 +28,7 @@ p {
     background-color: #f8f9fa;
 }
 
-input {
+#searchBoxInput {
     background: url('../../public/search.svg') no-repeat 0.5rem center;
     padding-left: 3rem !important;
 }

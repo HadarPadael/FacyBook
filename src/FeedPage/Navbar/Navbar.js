@@ -35,6 +35,7 @@ function Navbar() {
           </ul>
           <form id="searchBox" className="d-flex" role="search">
             <input
+              id="serchBoxInput"
               className="form-control me-2"
               type="search"
               placeholder="Search in facyBook"

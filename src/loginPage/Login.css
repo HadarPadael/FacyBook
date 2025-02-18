@@ -5,13 +5,16 @@ h1 {
 
 .card-body {
     align-items: center;
+    padding-top: 20px;
+    height: 400px;
+    margin-top: 2%;
 }
 
 #card {
     width: 85%;
     height: 80%;
     padding: 10px;
-    margin: 10%;
+    margin-bottom: 50%;
 }
 
 input {
@@ -27,11 +30,16 @@ input {
     padding: 20px;
 
 }
+
 #sign-up-btn {
-    text-decoration: none;
-    padding: 0.5rem 6rem;
-    height: 10%;
-    border: none;
-    text-anchor: middle;
+    height: 50px;
     font-size: larger;
+    padding-bottom: 5px;
+}
+
+#LogInBtn {
+    width: 30pc;
+    height: 4pc;
+    font-size: xx-large;
+    font-weight: bold;
 }

@@ -8,7 +8,7 @@ function SignUp() {
         facybook
       </div>
       <div className="card shadow-lg rounded">
-        <div className="card-body">
+        <div id="SignUpCard" className="card-body">
           <h2>Create a new account</h2>
           <h4>It's fast and easy.</h4>
           <hr />
@@ -26,7 +26,7 @@ function SignUp() {
               />
             </div>
             <div className="col-12">
-              <button className="btn btn-success" type="submit">
+              <button id="sign-up-btn" className="btn btn-success" type="submit">
                 Sign up
               </button>
             </div>
