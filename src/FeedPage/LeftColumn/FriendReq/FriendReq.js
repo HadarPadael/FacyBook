@@ -2,7 +2,7 @@ function FriendReq() {
   return (
     <div className="container text-center">
       <div className="row">
-        <h3>Friend requests</h3>
+        <h3 id="friendREQ">Friend requests</h3>
         <div className="col">
           <img id="friendReqPic" src="/profilePic.jpg" alt="profilePic" />
         </div>

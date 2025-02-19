@@ -1,4 +1,15 @@
-function MenuComponent({option1, option2, option3, icon}) {
+import { Link } from "react-router-dom";
+
+function MenuComponent({
+  option1,
+  option2,
+  option3,
+  icon,
+  link1,
+  link2,
+  link3,
+  handler,
+}) {
   return (
     <li className="nav-item dropdown">
       <a
@@ -12,22 +23,22 @@ function MenuComponent({option1, option2, option3, icon}) {
       </a>
       <ul className="dropdown-menu">
         <li>
-          <a className="dropdown-item" href="#">
+          <Link to={link1} className="dropdown-item" href="#">
             {option1}
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="dropdown-item" href="#">
+          <Link to={link2} className="dropdown-item" href="#">
             {option2}
-          </a>
+          </Link>
         </li>
         <li>
           <hr className="dropdown-divider" />
         </li>
         <li>
-          <a className="dropdown-item" href="#">
+          <Link to={link3} className="dropdown-item" href="#" onClick={handler}>
             {option3}
-          </a>
+          </Link>
         </li>
       </ul>
     </li>

@@ -4,7 +4,7 @@ import Navbar from "./Navbar/Navbar";
 import RightColumn from "./RightColumn/RightColumn";
 import ScrollCol from "./ScrollList/ScrollCol";
 
-function Feed({ setIsLoggedIn }) {
+function Feed() {
   return (
     <div className="vstack gap-2">
       <div className="p-2">

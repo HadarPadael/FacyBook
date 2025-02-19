@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CreateLogInList from "../CreateLogInList";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContext";
 
-function ValidateLogin({ setIsLoggedIn }) {
+function ValidateLogin() {
+  const { setIsLoggedIn } = useContext(AuthContext);
   const [formData, setData] = useState({
     username: "",
     password: "",
@@ -12,8 +15,8 @@ function ValidateLogin({ setIsLoggedIn }) {
   const navigate = useNavigate();
 
   // Hardcoded username and password for pre-server state
-  const hardcodedUsername = "user";
-  const hardcodedPassword = "password";
+  const hardcodedUsername = "Hadar";
+  const hardcodedPassword = "12345678";
 
   const handleSubmit = (event) => {
     event.preventDefault();

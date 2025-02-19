@@ -1,7 +1,14 @@
 import MenuComponent from "./MenuComponent";
 import NavbarButtonsList from "./NavbarButtonsList";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContext";
 
 function Navbar() {
+  const { setIsLoggedIn } = useContext(AuthContext);
+  const handleClick = (event) => {
+    setIsLoggedIn(false);
+  };
+  
   return (
     <nav
       id="navbarContainer"
@@ -27,6 +34,10 @@ function Navbar() {
                     option1={"Create new post"}
                     option2={"See profile"}
                     option3={"Log out"}
+                    link1={"/CreateNewPost"}
+                    link2={"/ProfilePage"}
+                    link3={"/"}
+                    handler={handleClick}
                     icon={"bi bi-list"}
                   />
                 </div>

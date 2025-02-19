@@ -2,14 +2,14 @@ import "./Login.css";
 import ValidateLogin from "./InteractionLogic/ValidateLogin";
 import ToSignUp from "./InteractionLogic/ToSignUp";
 
-function Login({ setIsLoggedIn }) {
+function Login() {
   return (
     <div className="container text-center">
       <div className="row">
         <div className="col">
           <div id="card" className="card shadow-lg rounded">
             <div className="card-body">
-              <ValidateLogin setIsLoggedIn={setIsLoggedIn} />
+              <ValidateLogin />
               <div id="liveAlertPlaceholder"></div>
               <button
                 type="button"

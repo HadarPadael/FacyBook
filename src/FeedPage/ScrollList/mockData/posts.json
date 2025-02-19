@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "name": "John Doe",
+      "time": "2023-01-01T10:00:00Z",
+      "content": "Excited to start the new year with friends and family!",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "time": "2023-01-02T08:30:00Z",
+      "content": "Just had the best coffee of my life. Highly recommend trying it out!",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "Michael Brown",
+      "time": "2023-01-03T14:15:00Z",
+      "content": "Working on a new project—can’t wait to share details soon.",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "Alice Johnson",
+      "time": "2023-01-04T09:45:00Z",
+      "content": "Loving this sunny weather! Perfect day for a walk in the park.",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "Emily Davis",
+      "time": "2023-01-05T12:00:00Z",
+      "content": "Tried a new recipe today, it turned out great!",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "David Wilson",
+      "time": "2023-01-06T19:20:00Z",
+      "content": "Traveling for the first time in months—feels amazing!",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "Sarah Thompson",
+      "time": "2023-01-07T07:10:00Z",
+      "content": "Good morning! Ready to tackle the day.",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "Robert Taylor",
+      "time": "2023-01-08T16:45:00Z",
+      "content": "Anyone have book recommendations? Looking for something new.",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "Jessica Moore",
+      "time": "2023-01-09T11:05:00Z",
+      "content": "Just got back from a great run—feeling energized!",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    },
+    {
+      "name": "Daniel Anderson",
+      "time": "2023-01-10T18:30:00Z",
+      "content": "Had a fantastic day catching up with old friends.",
+      "profilePic": "/profilePic.jpg",
+      "postPic": "/postPic.jpg"
+    }
+  ]
+}
