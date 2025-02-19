@@ -6,6 +6,7 @@ import { useContext } from "react";
 import SignUp from "./SignUpPage/SignUp";
 import Feed from "./FeedPage/Feed";
 import TransitionPage from "./SignUpPage/TransitionPage";
+import CreateNewPost from "./FeedPage/CreateNewPost/CreateNewPost";
 
 function App() {
   // State to track authentication status
@@ -21,7 +22,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
-        
+        <Route path="/CreateNewPost" element={<CreateNewPost />} />
+
         {/* protrcted routes */}
         <Route path="/Feed" element={<ProtectedRoute element={<Feed />} />} />
         <Route

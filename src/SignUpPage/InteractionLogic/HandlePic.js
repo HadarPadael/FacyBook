@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function HandlePic() {
+function HandlePic({id}) {
   const [image, setImage] = useState(null);
 
   const handleImageChange = (event) => {
@@ -24,7 +24,7 @@ function HandlePic() {
         {image && (
           <div>
             <img
-              id="previewPic"
+              id={id}
               src={URL.createObjectURL(image)}
               alt="Preview"
             />

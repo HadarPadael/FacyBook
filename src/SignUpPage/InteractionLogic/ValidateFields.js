@@ -30,7 +30,7 @@ function ValidateFields() {
       {error && <div className="error">{error}</div>}
       <form onSubmit={handleSubmit}>
         <CreateSignUpList formData={formData} setData={setData} />
-        <HandlePic />
+        <HandlePic id={"RegPreviewPic"} />
         <div className="col-12">
           <button id="sign-up-btn" className="btn btn-success" type="submit">
             Sign up
