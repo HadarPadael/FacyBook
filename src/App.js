@@ -19,14 +19,15 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/Feed" element={<Feed setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/SignUp" element={<SignUp />} />
         {/* protrcted routes */}
-        <Route
+        {/* <Route
           path="/Feed"
           element={
             <ProtectedRoute element={<Feed setIsLoggedIn={setIsLoggedIn} />} />
           }
-        />
+        /> */}
         <Route
           path="/Success"
           element={<ProtectedRoute element={<TransitionPage />} />}

@@ -2,7 +2,7 @@ import ChoicesList from "./ChoicesList";
 
 function RightColumn() {
   return (
-    <ul className="list-group">
+    <ul id="rightScroll" className="list-group custom-scrollbar">
       <li className="list-group-item">
         <div className="container text-center">
           <div className="row">

@@ -1,4 +1,4 @@
-function ChoiceComponent({category, icon}) {
+function ChoiceComponent({ category, icon }) {
   return (
     <li className="list-group-item">
       <div className="container">

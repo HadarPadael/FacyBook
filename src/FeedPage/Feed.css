@@ -44,12 +44,11 @@ p {
 
 #LeftCol {
     align-self: flex-start;
-    overflow-y: scroll
 }
 
-#RightCol {
-    overflow-y: scroll
-}
+
+
+#RightCol {}
 
 #navbarContainer {
     padding-top: 0px;
@@ -145,6 +144,32 @@ h3 {
     margin-top: 10px;
     font-size: larger;
 }
+
 .list-group-item {
     list-style: none;
+}
+
+#leftScroll {
+    overflow-y: auto !important;
+    height: 400px;
+}
+
+#rightScroll {
+    overflow-y: auto !important;
+    height: 500px;
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+    background-color: lightgrey;
+
 }
