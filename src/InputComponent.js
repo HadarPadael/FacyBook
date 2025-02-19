@@ -1,8 +1,9 @@
-function InputComponent({ type, placeholder, classType, onChange }) {
+function InputComponent({ type, name, placeholder, classType, onChange }) {
   return (
     <div className={classType}>
       <input
         type={type}
+        name={name}
         className="form-control"
         placeholder={placeholder}
         onChange={onChange}

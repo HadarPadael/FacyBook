@@ -1,19 +1,28 @@
 import InputComponent from "../InputComponent";
 
-function CreateLogInList({ setUsername, setPassword }) {
-    
+function CreateLogInList({ formData, setData }) {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   const InputComponents = [
     {
       type: "text",
+      name: "username",
       placeholder: "Username",
       classType: "mb-3",
-      onChange: (e) => setUsername(e.target.value),
+      onChange: handleChange,
     },
     {
       type: "password",
+      name: "password",
       placeholder: "Password",
       classType: "mb-3",
-      onChange: (e) => setPassword(e.target.value),
+      onChange: handleChange,
     },
   ];
 

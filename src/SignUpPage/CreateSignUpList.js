@@ -1,35 +1,42 @@
 import InputComponent from "../InputComponent";
 
-function CreateSignUpList({
-  setPassword,
-  setValidPassword,
-  setUsername,
-  setNickname,
-}) {
+function CreateSignUpList({ formData, setData }) {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   const InputComponents = [
     {
       type: "password",
+      name: "password",
       placeholder: "Password",
       classType: "col-md-6",
-      onChange: (e) => setPassword(e.target.value),
+      onChange: handleChange,
     },
     {
       type: "password",
+      name: "validPassword",
       placeholder: "re-enter password",
       classType: "col-md-6",
-      onChange: (e) => setValidPassword(e.target.value),
+      onChange: handleChange,
     },
     {
       type: "text",
+      name: "nickname",
       placeholder: "Nickname",
       classType: "col-md-6",
-      onChange: (e) => setNickname(e.target.value),
+      onChange: handleChange,
     },
     {
       type: "text",
+      name: "username",
       placeholder: "Username",
       classType: "col-md-6",
-      onChange: (e) => setUsername(e.target.value),
+      onChange: handleChange,
     },
   ];
 

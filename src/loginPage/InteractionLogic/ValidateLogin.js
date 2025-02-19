@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 import CreateLogInList from "../CreateLogInList";
 
 function ValidateLogin({ setIsLoggedIn }) {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [formData, setData] = useState({
+    username: "",
+    password: "",
+  });
+
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -15,7 +18,10 @@ function ValidateLogin({ setIsLoggedIn }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (hardcodedPassword === password && hardcodedUsername === username) {
+    if (
+      hardcodedPassword === formData.password &&
+      hardcodedUsername === formData.username
+    ) {
       setIsLoggedIn(true);
       navigate("/Feed");
     } else {
@@ -27,7 +33,7 @@ function ValidateLogin({ setIsLoggedIn }) {
     <div>
       {error && <div className="error">{error}</div>}
       <form onSubmit={handleSubmit}>
-        <CreateLogInList setUsername={setUsername} setPassword={setPassword} />
+        <CreateLogInList formData={formData} setData={setData} />
         <button id="LogInBtn" className="btn btn-primary" type="submit">
           Log in
         </button>
