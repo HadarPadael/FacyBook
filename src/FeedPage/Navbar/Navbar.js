@@ -8,7 +8,7 @@ function Navbar() {
   const handleClick = (event) => {
     setIsLoggedIn(false);
   };
-  
+
   return (
     <nav
       id="navbarContainer"
@@ -32,7 +32,7 @@ function Navbar() {
                 <div className="col">
                   <MenuComponent
                     option1={"Create new post"}
-                    option2={"See profile"}
+                    option2={"Settings"}
                     option3={"Log out"}
                     link1={"/CreateNewPost"}
                     link2={"/ProfilePage"}

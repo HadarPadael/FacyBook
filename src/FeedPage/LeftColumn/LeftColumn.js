@@ -8,13 +8,13 @@ function LeftColumn() {
       id="leftScroll"
     >
       <div className="p-2">
-        <FriendReq />{" "}
-        {/*TO DO: once a db and server interaction is added implement functionality*/}
+        <FriendReq />
+        {/*TO DO: once a db and server interaction is added, implement functionality*/}
       </div>
       <hr></hr>
       <div className="p-2">
-        <Contacts />{" "}
-        {/*TO DO: once a db and server interaction is added implement functionality*/}
+        <Contacts />
+        {/*TO DO: once a db and server interaction is added, implement functionality*/}
       </div>
     </div>
   );

@@ -7,7 +7,6 @@ h1 {
     align-items: center;
     padding-top: 20px;
     height: 400px;
-    margin-top: 2%;
 }
 
 #card {
@@ -16,6 +15,7 @@ h1 {
     padding: 10px;
     margin-top: 20%;
     margin-bottom: 50%;
+    background-color: transparent;
 }
 
 input {
@@ -25,11 +25,11 @@ input {
 }
 
 #liveAlertBtn {
-    background-color: white;
+    background-color: transparent;
     color: blue;
-    border: white;
-    padding: 20px;
-
+    border: transparent;
+    margin-top: 10px;
+    height:max-content
 }
 
 #sign-up-btn {

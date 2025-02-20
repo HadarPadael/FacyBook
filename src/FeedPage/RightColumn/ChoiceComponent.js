@@ -3,12 +3,15 @@ function ChoiceComponent({ category, icon }) {
     <li className="list-group-item">
       <div className="container">
         <div className="row">
-          <div className="col text-start btn btn-light">{category}</div>
+          <div id="choiceBTN" className="col text-start btn btn-light">
+            {category}
+          </div>
           <div className="col text-end">
             <i className={icon}></i>
           </div>
         </div>
       </div>
+      <hr></hr>
     </li>
   );
 }
