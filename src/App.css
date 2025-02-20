@@ -32,3 +32,6 @@ body.dark-mode * {
 body.dark-mode ::placeholder {
     color: white;
 }
+body.dark-mode .card {
+    border-color: white;
+}

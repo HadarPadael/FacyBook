@@ -2,7 +2,7 @@ import InteractionComponent from "./InteractionComponent";
 import MenuComponent from "../../../Navbar/MenuComponent";
 import { useState } from "react";
 
-function InteractionsList() {
+function InteractionsList({ comments, postID }) {
   const [isLiked, setLike] = useState(false);
 
   const handleLike = (event) => {
@@ -13,8 +13,14 @@ function InteractionsList() {
     {
       icon: isLiked ? "bi bi-hand-thumbs-up-fill" : "bi bi-hand-thumbs-up",
       handleClick: handleLike,
+      comments: comments,
     },
-    { icon: "bi bi-chat-heart", toggle: "modal", target: "#CommentsModal", },
+    {
+      icon: "bi bi-chat-heart",
+      toggle: "modal",
+      target: postID,
+      comments: comments,
+    },
   ];
 
   const InteractionsL = Interactions.map((interaction, key) => {

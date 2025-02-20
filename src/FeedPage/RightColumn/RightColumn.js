@@ -6,7 +6,7 @@ function RightColumn() {
       <li className="list-group-item">
         <div className="container text-center">
           <div className="row">
-            <div className="col text-start">Nickname</div>
+            <div className="col text-start details-Username">Nickname</div>
             <div className="col text-end">
               <img src="/profilePic.jpg" alt="profilePic" />
             </div>

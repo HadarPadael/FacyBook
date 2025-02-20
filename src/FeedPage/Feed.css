@@ -131,6 +131,9 @@ h3 {
 #postText {
     margin-bottom: 0px;
     padding-bottom: 0px;
+    font-weight: normal;
+    font-size: medium;
+    text-align: start;
 }
 
 .reactionBtn {
@@ -150,7 +153,7 @@ h3 {
     list-style: none;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
@@ -215,16 +218,106 @@ ul{
 #choiceBTN {
     background-color: transparent;
     border-color: transparent;
+    font-size: large;
+    font-weight: bolder;
+
+
 }
-.row{
+
+#choiceBTN-icon {
+    font-size: x-large;
+    padding-right: 20%;
+    color: blue;
+
+}
+
+.details-Username {
+    padding-left: 5%;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.row {
     --bs-gutter-x: 0rem;
 }
-#interactionRow{
+
+#interactionRow {
     align-content: center;
 }
-.share{
+
+.share {
     margin-top: 0px;
 }
-.modal-dialog{
+
+.modal-dialog {
     margin-top: 5px;
+    overflow-y: auto !important;
+    height: 800px;
+    border-radius: 2%;
+}
+
+.modal-header {
+    display: grid;
+}
+
+.modal-footer {
+    display: contents;
+    align-content: space-around;
+}
+
+.modal-title {
+    margin-top: 0px !important;
+}
+
+.btn-close {
+    margin-bottom: 0px;
+}
+
+#commentCard {
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+}
+
+#commentContent {
+    font-weight: normal;
+    font-size: small;
+}
+
+#comment-Publisher {
+    font-weight: bold;
+    font-size: small;
+}
+
+#commentsSection {
+    overflow-y: auto !important;
+    height: 100px;
+}
+
+.add-comment-pic {
+    padding-top: 0px !important;
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+.add-comment {
+    height: 100%;
+    width: 98%;
+    background-color: aliceblue;
+}
+
+.input-group {
+    position: relative;
+    height: 90%;
+    width: 97%;
+}
+
+#commentBTN {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: inherit;
 }

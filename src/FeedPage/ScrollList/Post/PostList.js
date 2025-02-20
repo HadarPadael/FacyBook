@@ -1,10 +1,14 @@
 import PostComponent from "./PostComponent";
 import postData from "../mockData/posts.json";
 
-const { posts } = postData;
+function PostList() {
+  const { posts } = postData;
 
-const PostList = posts.map((post, key) => {
-  return <PostComponent {...post} key={key} />;
-});
+  const postL = posts.map((post, index) => {
+    return <PostComponent {...post} key={index} />;
+  });
+
+  return <ul>{postL}</ul>;
+}
 
 export default PostList;

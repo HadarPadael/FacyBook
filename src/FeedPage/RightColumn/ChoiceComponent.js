@@ -7,7 +7,7 @@ function ChoiceComponent({ category, icon }) {
             {category}
           </div>
           <div className="col text-end">
-            <i className={icon}></i>
+            <i id="choiceBTN-icon" className={icon}></i>
           </div>
         </div>
       </div>
