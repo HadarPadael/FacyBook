@@ -7,6 +7,7 @@ import SignUp from "./SignUpPage/SignUp";
 import Feed from "./FeedPage/Feed";
 import TransitionPage from "./SignUpPage/TransitionPage";
 import CreateNewPost from "./FeedPage/CreateNewPost/CreateNewPost";
+import UserPage from "./FeedPage/ScrollList/UserPage/UserPage";
 
 function App() {
   // State to track authentication status
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
         <Route path="/Feed" element={<Feed />} />
+        <Route path="/UserPage" element={<UserPage />} />
 
         {/* protrcted routes */}
         {/* <Route path="/Feed" element={<ProtectedRoute element={<Feed />} />} /> */}

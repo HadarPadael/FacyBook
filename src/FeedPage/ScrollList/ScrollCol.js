@@ -1,7 +1,5 @@
-import PostList from "./Post/PostList";
-
-function ScrollCol() {
-  return <ul>{PostList}</ul>;
+function ScrollCol({ list }) {
+  return <ul>{list}</ul>;
 }
 
 export default ScrollCol;

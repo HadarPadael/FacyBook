@@ -1,11 +1,11 @@
-import "./Feed.css";
-import LeftColumn from "./LeftColumn/LeftColumn";
-import Navbar from "./Navbar/Navbar";
-import RightColumn from "./RightColumn/RightColumn";
-import ScrollCol from "./ScrollList/ScrollCol";
-import PostList from "./ScrollList/Post/PostList";
+import "../../Feed.css";
+import LeftColumn from "../../LeftColumn/LeftColumn";
+import Navbar from "../../Navbar/Navbar";
+import RightColumn from "../../RightColumn/RightColumn";
+import ScrollCol from "../ScrollCol";
+import PostList from "../Post/PostList";
 
-function Feed() {
+function UserPage() {
   return (
     <div className="vstack gap-2">
       <div className="p-2">
@@ -17,7 +17,7 @@ function Feed() {
             <LeftColumn />
           </div>
           <div id="PostsCol" className="col-6">
-            <ScrollCol list={PostList}/>
+            <ScrollCol list={PostList} />
           </div>
           <div id="RightCol" className="col-3">
             <RightColumn />
@@ -28,4 +28,4 @@ function Feed() {
   );
 }
 
-export default Feed;
+export default UserPage;

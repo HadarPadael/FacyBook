@@ -14,7 +14,7 @@ function InteractionsList() {
       icon: isLiked ? "bi bi-hand-thumbs-up-fill" : "bi bi-hand-thumbs-up",
       handleClick: handleLike,
     },
-    { icon: "bi bi-chat-heart" },
+    { icon: "bi bi-chat-heart", toggle: "modal", target: "#CommentsModal", },
   ];
 
   const InteractionsL = Interactions.map((interaction, key) => {
