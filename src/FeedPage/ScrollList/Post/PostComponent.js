@@ -1,5 +1,5 @@
 import MenuComponent from "../../Navbar/MenuComponent";
-import InteractionsList from "../InteractionBar/InteractionsList";
+import InteractionsList from "./InteractionBar/InteractionsList";
 import PostContent from "./PostContent";
 import Userdetails from "./UserDetails";
 
