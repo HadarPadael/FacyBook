@@ -1,12 +1,12 @@
 import ColumnComponent from "./ColumnComponent";
 import MenuComponent from "./MenuComponent";
-import Handlers from "./InteractionLogic/Handlers";
+import NavbarHandlers from "./InteractionLogic/NavbarHandlers";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthContext";
 
 function NavbarButtonsList() {
   const { darkMode } = useContext(AuthContext);
-  const { handleLogOut, handleModeSwitch } = Handlers();
+  const { handleLogOut, handleModeSwitch } = NavbarHandlers();
 
   const NavbarButtons = [
     { displayPic: "inline", displayIcon: "none" },

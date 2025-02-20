@@ -20,9 +20,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
             <div className="d-flex align-items-center gap-4">
-              <div>
-                <NavbarButtonsList />
-              </div>
+              <NavbarButtonsList />
             </div>
           </ul>
           <form id="searchBox" className="d-flex" role="search">

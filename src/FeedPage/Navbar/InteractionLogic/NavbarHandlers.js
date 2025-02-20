@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../../AuthContext";
 
-export default function Handlers() {
+export default function NavbarHandlers() {
   const { setIsLoggedIn } = useContext(AuthContext);
   const { darkMode, setMode } = useContext(AuthContext);
 

@@ -1,9 +1,9 @@
-function InteractionComponent({icon}){
-    return (
-      <div className="col-4 btn btn-light reactionBtn">
-        <div className={icon}/>
-      </div>
-    );
+function InteractionComponent({ icon, handleClick }) {
+  return (
+    <div className="col-4 btn btn-light reactionBtn" onClick={handleClick}>
+      <div className={icon} />
+    </div>
+  );
 }
 
 export default InteractionComponent;
