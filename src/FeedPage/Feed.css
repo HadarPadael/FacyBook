@@ -135,7 +135,7 @@ h3 {
 
 .reactionBtn {
     font-weight: bold;
-    font-size: medium;
+    font-size: xx-large;
     background-color: transparent;
     border-color: transparent;
 }
@@ -147,6 +147,10 @@ h3 {
 }
 
 .list-group-item {
+    list-style: none;
+}
+
+ul{
     list-style: none;
 }
 
@@ -214,4 +218,10 @@ h3 {
 }
 .row{
     --bs-gutter-x: 0rem;
+}
+#interactionRow{
+    align-content: center;
+}
+.share{
+    margin-top: 0px;
 }

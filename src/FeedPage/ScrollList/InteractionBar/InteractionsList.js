@@ -1,8 +1,7 @@
 import InteractionComponent from "./InteractionComponent";
 
 const Interactions = [
-  { icon: "bi bi-hand-thumbs-up" },
-  { icon: "bi bi-share" },
+  { icon: "bi bi-hand-thumbs-up"},
   { icon: "bi bi-chat-heart" },
 ];
 

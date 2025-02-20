@@ -22,10 +22,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/CreateNewPost" element={<CreateNewPost />} />
+        <Route path="/Feed" element={<Feed />} />
 
         {/* protrcted routes */}
-        <Route path="/Feed" element={<ProtectedRoute element={<Feed />} />} />
+        {/* <Route path="/Feed" element={<ProtectedRoute element={<Feed />} />} /> */}
+        <Route
+          path="/CreateNewPost"
+          element={<ProtectedRoute element={<CreateNewPost />} />}
+        />
         <Route
           path="/Success"
           element={<ProtectedRoute element={<TransitionPage />} />}

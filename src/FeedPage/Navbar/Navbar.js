@@ -1,14 +1,7 @@
 import MenuComponent from "./MenuComponent";
 import NavbarButtonsList from "./NavbarButtonsList";
-import { useContext } from "react";
-import { AuthContext } from "../../AuthContext";
 
 function Navbar() {
-  const { setIsLoggedIn } = useContext(AuthContext);
-  const handleClick = (event) => {
-    setIsLoggedIn(false);
-  };
-
   return (
     <nav
       id="navbarContainer"
@@ -27,20 +20,8 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
             <div className="d-flex align-items-center gap-4">
-              <div className="row">
-                {NavbarButtonsList}
-                <div className="col">
-                  <MenuComponent
-                    option1={"Create new post"}
-                    option2={"Settings"}
-                    option3={"Log out"}
-                    link1={"/CreateNewPost"}
-                    link2={"/ProfilePage"}
-                    link3={"/"}
-                    handler={handleClick}
-                    icon={"bi bi-list"}
-                  />
-                </div>
+              <div>
+                <NavbarButtonsList />
               </div>
             </div>
           </ul>
