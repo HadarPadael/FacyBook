@@ -2,7 +2,13 @@ import InteractionComponent from "./InteractionComponent";
 import MenuComponent from "../../../Navbar/MenuComponent";
 import { useState } from "react";
 
-function InteractionsList({ comments, postID }) {
+function InteractionsList({
+  comments,
+  postID,
+  name,
+  content,
+  postPic,
+}) {
   const [isLiked, setLike] = useState(false);
 
   const handleLike = (event) => {
@@ -20,6 +26,9 @@ function InteractionsList({ comments, postID }) {
       toggle: "modal",
       target: postID,
       comments: comments,
+      name: name,
+      content: content,
+      postPic: postPic,
     },
   ];
 

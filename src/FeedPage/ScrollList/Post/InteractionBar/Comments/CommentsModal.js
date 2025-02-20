@@ -2,7 +2,7 @@ import PostContent from "../../PostContent";
 import CommentBar from "./CommentBar";
 import CommentsList from "./CommentsList";
 
-function CommentsModal({ comments, id }) {
+function CommentsModal({ comments, id, name, content, postPic }) {
   return (
     <div className="modal fade" id={id} tabindex="-1" aria-hidden="true">
       <div className="modal-dialog custom-scrollbar">
@@ -14,10 +14,10 @@ function CommentsModal({ comments, id }) {
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
-            <h1 className="modal-title fs-5">Nicknames post</h1>
+            <h1 className="modal-title fs-5">{name + "s post"}</h1>
           </div>
           <div className="modal-body">
-            <PostContent postPic={"/postPic.jpg"} content={"Post content"} />
+            <PostContent postPic={postPic} content={content} />
             <hr></hr>
             <div id="commentsSection" className="custom-scrollbar">
               <CommentsList comments={comments} />

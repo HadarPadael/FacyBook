@@ -1,6 +1,15 @@
 import CommentsModal from "./Comments/CommentsModal";
 
-function InteractionComponent({ icon, handleClick, toggle, target, comments }) {
+function InteractionComponent({
+  icon,
+  handleClick,
+  toggle,
+  target,
+  comments,
+  name,
+  content,
+  postPic,
+}) {
   console.log(comments);
   return (
     <div
@@ -11,7 +20,13 @@ function InteractionComponent({ icon, handleClick, toggle, target, comments }) {
       data-bs-target={"#" + target}
     >
       <div className={icon} />
-      <CommentsModal comments={comments} id={target} />
+      <CommentsModal
+        comments={comments}
+        id={target}
+        name={name}
+        content={content}
+        postPic={postPic}
+      />
     </div>
   );
 }

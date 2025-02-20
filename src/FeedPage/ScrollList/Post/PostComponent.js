@@ -2,7 +2,15 @@ import InteractionsList from "./InteractionBar/InteractionsList";
 import PostContent from "./PostContent";
 import Userdetails from "./UserDetails";
 
-function PostComponent({ name, time, profilePic, content, postPic, comments, postID }) {
+function PostComponent({
+  name,
+  time,
+  profilePic,
+  content,
+  postPic,
+  comments,
+  postID,
+}) {
   return (
     <li id="postContainer" className="card shadow-lg">
       <div className="vstack gap-3">
@@ -14,7 +22,13 @@ function PostComponent({ name, time, profilePic, content, postPic, comments, pos
         </div>
         <hr></hr>
         <div className="p-0">
-          <InteractionsList comments={comments} postID={postID} />
+          <InteractionsList
+            comments={comments}
+            postID={postID}
+            content={content}
+            name={name}
+            postPic={postPic}
+          />
         </div>
       </div>
     </li>
