@@ -13,6 +13,7 @@ function CreateNewPost() {
   });
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     setIsLoggedIn(true);
     navigate("/Feed");
   };
