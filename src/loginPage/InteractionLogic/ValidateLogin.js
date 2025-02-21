@@ -28,7 +28,7 @@ function ValidateLogin() {
       setIsLoggedIn(true);
       navigate("/Feed");
     } else {
-      setError("Incorrect username or password");
+      setError("Incorrect username and/or password");
     }
   };
 
