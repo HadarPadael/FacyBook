@@ -11,6 +11,21 @@ function UserPage() {
         <Navbar />
       </div>
       <div id="UnderNavContainer" className="p-1 text-center">
+        <div id="userArea" className="p-2">
+          <div className="cover-container">
+            <img id="backgroundImg" src="/backgroundPic.jpg" />
+            <div className="profile-container row">
+              <div className="col-10">
+                <img src="/profilePic.jpg" alt="Profile" id="profile-pic" />
+              </div>
+              <div className="col-2 usernameCol">
+                <h1 id="user-profile-name">Nickname</h1>
+                <h6 id="user-profile-friends">0 friends</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr></hr>
         <div className="row">
           <div id="LeftCol" className="col-3">
             <LeftColumn />
