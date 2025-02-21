@@ -1,7 +1,8 @@
-import MenuComponent from "./MenuComponent";
+import NavbarHandlers from "./InteractionLogic/NavbarHandlers";
 import NavbarButtonsList from "./NavbarButtonsList";
 
 function Navbar() {
+  const { handleHome } = NavbarHandlers();
   return (
     <nav
       id="navbarContainer"
@@ -32,7 +33,7 @@ function Navbar() {
               aria-label="Search"
             />
           </form>
-          <img src="/logo.svg" alt="Logo" />
+          <img id="logoPic" src="/logo.svg" alt="Logo" className="btn" onClick={handleHome}/>
         </div>
       </div>
     </nav>

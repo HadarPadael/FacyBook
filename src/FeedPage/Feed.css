@@ -159,14 +159,14 @@ ul {
     overflow-y: auto !important;
     height: 450px;
     position: sticky;
-    top: 20%;
+    top: 15%;
 }
 
 #rightScroll {
     overflow-y: auto !important;
     height: 450px;
     position: sticky;
-    top: 20%;
+    top: 15%;
 }
 
 .custom-scrollbar:hover::-webkit-scrollbar {

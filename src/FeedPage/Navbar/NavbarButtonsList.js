@@ -6,10 +6,10 @@ import { AuthContext } from "../../AuthContext";
 
 function NavbarButtonsList() {
   const { darkMode } = useContext(AuthContext);
-  const { handleLogOut, handleModeSwitch } = NavbarHandlers();
+  const { handleLogOut, handleModeSwitch, handleProfile } = NavbarHandlers();
 
   const NavbarButtons = [
-    { displayPic: "inline", displayIcon: "none" },
+    { displayPic: "inline", displayIcon: "none", onClick: handleProfile },
     /*notifications */
     { displayPic: "none", displayIcon: "inline", IconClass: "bi bi-bell-fill" },
     /*chats */
