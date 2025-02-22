@@ -23,11 +23,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/Feed" element={<Feed />} />
-        <Route path="/UserPage" element={<UserPage />} />
 
         {/* protrcted routes */}
-        {/* <Route path="/Feed" element={<ProtectedRoute element={<Feed />} />} /> */}
+        <Route
+          path="/UserPage"
+          element={<ProtectedRoute element={<UserPage />} />}
+        />
+        <Route path="/Feed" element={<ProtectedRoute element={<Feed />} />} />
         <Route
           path="/CreateNewPost"
           element={<ProtectedRoute element={<CreateNewPost />} />}
