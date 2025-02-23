@@ -3,7 +3,8 @@ div>button {
 }
 
 img {
-    width: 80px;
+    width: 100px;
+    height: 100px;
     padding: 10px;
     border-radius: 50%;
     object-fit: cover;
@@ -372,4 +373,7 @@ ul {
 }
 #user-profile-friends{
     font-weight: lighter;
+}
+.top-container{
+    margin-top: 15px;
 }

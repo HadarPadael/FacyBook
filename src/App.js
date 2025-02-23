@@ -23,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Success" element={<TransitionPage />} />
 
         {/* protrcted routes */}
         <Route
@@ -33,10 +34,6 @@ function App() {
         <Route
           path="/CreateNewPost"
           element={<ProtectedRoute element={<CreateNewPost />} />}
-        />
-        <Route
-          path="/Success"
-          element={<ProtectedRoute element={<TransitionPage />} />}
         />
       </Routes>
     </BrowserRouter>

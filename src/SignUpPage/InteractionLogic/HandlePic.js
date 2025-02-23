@@ -1,11 +1,20 @@
 import { useState } from "react";
+import ImageHelper from "./ImageHelper";
 
-function HandlePic({id}) {
+function HandlePic({ id, setData }) {
   const [image, setImage] = useState(null);
 
-  const handleImageChange = (event) => {
+  const handleImageChange = async (event) => {
     const file = event.target.files[0];
+
     setImage(file);
+    const base64 = await ImageHelper.fileToBase64(file);
+    const compressed = await ImageHelper.compressBase64(base64, 800, 800, 0.8);
+
+    setData((prevData) => ({
+      ...prevData,
+      profilePic: compressed,
+    }));
   };
 
   return (
@@ -23,11 +32,7 @@ function HandlePic({id}) {
       <div className="col-12">
         {image && (
           <div>
-            <img
-              id={id}
-              src={URL.createObjectURL(image)}
-              alt="Preview"
-            />
+            <img id={id} src={URL.createObjectURL(image)} alt="Preview" />
           </div>
         )}
       </div>

@@ -3,9 +3,10 @@ import { useNavigate } from "react-router-dom";
 import CreateLogInList from "../CreateLogInList";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthContext";
+import userAPI from "../../API/userAPI";
 
 function ValidateLogin() {
-  const { setIsLoggedIn } = useContext(AuthContext);
+  const { setIsLoggedIn, setUser } = useContext(AuthContext);
   const [formData, setData] = useState({
     username: "",
     password: "",
@@ -14,21 +15,20 @@ function ValidateLogin() {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  // Hardcoded username and password for pre-server state
-  const hardcodedUsername = "Hadar";
-  const hardcodedPassword = "12345678";
-
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-
-    if (
-      hardcodedPassword === formData.password &&
-      hardcodedUsername === formData.username
-    ) {
-      setIsLoggedIn(true);
-      navigate("/Feed");
-    } else {
-      setError("Incorrect username and/or password");
+    try {
+      const user = await userAPI.userLogin(formData);
+      if (user.password === formData.password) {
+        setIsLoggedIn(true);
+        setUser(user);
+        navigate("/Feed");
+      } else {
+        setError("Incorrect username and/or password");
+      }
+    } catch (err) {
+      console.error(err);
+      setError(String(err));
     }
   };
 

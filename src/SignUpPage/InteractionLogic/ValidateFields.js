@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CreateSignUpList from "../CreateSignUpList";
 import HandlePic from "./HandlePic";
+import userAPI from "../../API/userAPI";
 
 function ValidateFields() {
   const [formData, setData] = useState({
@@ -9,11 +10,12 @@ function ValidateFields() {
     nickname: "",
     password: "",
     validPassword: "",
+    profilePic: "",
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     if (formData.password !== formData.validPassword) {
@@ -21,7 +23,14 @@ function ValidateFields() {
     } else if (formData.password.length < 8) {
       setError("passwords must be at least 8 characters long!");
     } else {
-      navigate("/Success");
+      try {
+        const newUser = await userAPI.createUser({ formData });
+        console.log("User created:", newUser);
+        navigate("/Success");
+      } catch (err) {
+        console.error(err);
+        setError(String(err));
+      }
     }
   };
 
@@ -30,7 +39,7 @@ function ValidateFields() {
       {error && <div className="error">{error}</div>}
       <form onSubmit={handleSubmit}>
         <CreateSignUpList formData={formData} setData={setData} />
-        <HandlePic id={"RegPreviewPic"} />
+        <HandlePic id="RegPreviewPic" setData={setData} />
         <div className="col-12">
           <button id="sign-up-btn" className="btn btn-success" type="submit">
             Sign up

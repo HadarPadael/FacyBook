@@ -1,7 +1,7 @@
 import Contacts from "./Contacts/Contacts";
 import FriendReq from "./FriendReq/FriendReq";
 
-function LeftColumn() {
+function LeftColumn({user}) {
   return (
     <div
       className="vstack gap-2 body-tertiary px-3 mb-3 custom-scrollbar"
