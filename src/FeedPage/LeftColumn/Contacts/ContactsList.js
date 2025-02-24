@@ -1,9 +1,12 @@
 import ContactComponent from "./ContactComponent";
 
-const Contacts = [{ profilePic: "/profilePic.jpg", friendName: "friend name" }];
+function ContactsList({friends}) {
+  
+  const contacts = friends.map((contact, key) => {
+    return <ContactComponent {...contact} key={key} />;
+  });
 
-const ContactsList = Contacts.map((contact, key) => {
-    return <ContactComponent {...contact} key={key}/>;
-});
+  return <ul className="list-group">{contacts}</ul>;
+}
 
-export default ContactsList
+export default ContactsList;

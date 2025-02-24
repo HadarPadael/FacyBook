@@ -10,7 +10,6 @@ function InteractionComponent({
   content,
   postPic,
 }) {
-  console.log(comments);
   return (
     <div
       className="col-4 btn btn-light reactionBtn"

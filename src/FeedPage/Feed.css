@@ -4,7 +4,7 @@ div>button {
 
 img {
     width: 100px;
-    height: 100px;
+    height: 100%;
     padding: 10px;
     border-radius: 50%;
     object-fit: cover;
@@ -119,12 +119,14 @@ h3 {
 }
 
 #upperName {
-    padding-top: 3% !important;
+    padding-top: 8% !important;
+    padding-left: 5% !important;
 }
 
 #upperTime {
     padding-top: 0px !important;
     margin-top: 0px;
+    padding-left: 5% !important;
 }
 
 #postText {
@@ -368,12 +370,29 @@ ul {
     justify-content: center;
     height: 250px;
 }
-#backgroundImg{
+
+#backgroundImg {
     margin-bottom: 20px;
 }
-#user-profile-friends{
+
+#user-profile-friends {
     font-weight: lighter;
 }
-.top-container{
+
+.top-container {
     margin-top: 15px;
+}
+
+.ProfilePic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: 100% 10%;
+}
+
+#NavbarProfilePic {
+    height: 100px;
+    width: 100px;
 }

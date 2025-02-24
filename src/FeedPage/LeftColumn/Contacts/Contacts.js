@@ -1,10 +1,10 @@
 import ContactsList from "./ContactsList";
 
-function Contacts() {
+function Contacts({ friends }) {
   return (
     <div>
       <h4 className="contacts">Contacts</h4>
-      <ul className="list-group">{ContactsList}</ul>
+      <ContactsList friends={friends} />
     </div>
   );
 }

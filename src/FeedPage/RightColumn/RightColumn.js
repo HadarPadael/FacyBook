@@ -9,9 +9,16 @@ function RightColumn({user}) {
       <li className="list-group-item">
         <div className="container top-container text-center">
           <div className="row">
-            <div className="col text-start details-Username">Nickname</div>
+            <div className="col text-start details-Username">
+              {user.nickname}
+            </div>
             <div className="col text-end">
-              <img src={blobUrl} alt="profilePic" />
+              <img
+                id="infoProfilePic"
+                src={blobUrl}
+                alt="profilePic"
+                className="ProfilePic"
+              />
             </div>
           </div>
         </div>
