@@ -3,8 +3,7 @@ import { AuthContext } from "../../../AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export default function NavbarHandlers() {
-  const { setIsLoggedIn } = useContext(AuthContext);
-  const { darkMode, setMode } = useContext(AuthContext);
+  const { darkMode, setMode, setIsLoggedIn } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {
