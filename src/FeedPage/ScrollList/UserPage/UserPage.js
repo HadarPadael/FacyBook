@@ -3,14 +3,17 @@ import LeftColumn from "../../LeftColumn/LeftColumn";
 import Navbar from "../../Navbar/Navbar";
 import RightColumn from "../../RightColumn/RightColumn";
 import PostList from "../Post/PostList";
+import UserPreview from "./UserPreview";
 import { useContext } from "react";
 import { AuthContext } from "../../../AuthContext";
-import ImageHelper from "../../../SignUpPage/InteractionLogic/ImageHelper";
+import { useLocation } from "react-router-dom";
 
 function UserPage() {
   const { user } = useContext(AuthContext);
-  const profilePicString = user.profilePic;
-  const blobUrl = ImageHelper.base64ToBlobUrl(profilePicString);
+  const location = useLocation();
+  const { name, profilePic } = location.state || {};
+  {/*currently logic is sloppy. change it so that istead of passing name and profilepic to Userprev, 
+    you will make a server call to get the user in case name is defined nad then pass it as usual */}
 
   return (
     <div className="vstack gap-2">
@@ -18,25 +21,7 @@ function UserPage() {
         <Navbar />
       </div>
       <div id="UnderNavContainer" className="p-1 text-center">
-        <div id="userArea" className="p-2">
-          <div className="cover-container">
-            <img id="backgroundImg" src="/backgroundPic.jpg" />
-            <div className="row" id="profile-container">
-              <div className="col-8">
-                <img
-                  className="ProfilePic"
-                  src={blobUrl}
-                  alt="Profile"
-                  id="profile-pic"
-                />
-              </div>
-              <div className="col-4" id="usernameCol">
-                <h1 id="user-profile-name">{user.nickname}</h1>
-                <h6 id="user-profile-friends">{`${user.friends.length} friends`}</h6>
-              </div>
-            </div>
-          </div>
-        </div>
+        <UserPreview user={user} name={name} profilePic={profilePic}/>
         <hr></hr>
         <div className="row">
           <div id="LeftCol" className="col-3">

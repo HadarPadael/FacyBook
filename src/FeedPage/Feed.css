@@ -120,13 +120,13 @@ h3 {
 
 #upperName {
     padding-top: 8% !important;
-    padding-left: 5% !important;
+
 }
 
 #upperTime {
     padding-top: 0px !important;
     margin-top: 0px;
-    padding-left: 5% !important;
+
 }
 
 #postText {
@@ -402,6 +402,15 @@ ul {
     height: 100px;
     width: 100px;
 }
-#f{
+
+#detailsContainer {
     background-color: transparent !important;
+}
+
+#userPagePicCol {
+    background-color: transparent !important;
+}
+
+.userActions {
+    margin-right: 10%;
 }
