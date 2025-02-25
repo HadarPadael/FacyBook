@@ -15,7 +15,11 @@ function Userdetails({ name, time, profilePic }) {
         <div className="container text-center">
           <div className="row">
             <div className="col-3 text-start">
-              <Link to="/UserPage" state={{ user }} onClick={handleClick}>
+              <Link
+                to="/UserPage"
+                state={{ user, otherUser: true }}
+                onClick={handleClick}
+              >
                 <img src={profilePic} alt="profilePic" />
               </Link>
             </div>

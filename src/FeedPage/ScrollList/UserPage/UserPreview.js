@@ -24,7 +24,7 @@ function UserPreview({ user, otherUser }) {
           </div>
         </div>
       </div>
-      <UserActions />
+      {otherUser && <UserActions />}
     </div>
   );
 }

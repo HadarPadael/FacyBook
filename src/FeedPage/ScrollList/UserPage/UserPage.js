@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../../Feed.css";
 import LeftColumn from "../../LeftColumn/LeftColumn";
 import Navbar from "../../Navbar/Navbar";

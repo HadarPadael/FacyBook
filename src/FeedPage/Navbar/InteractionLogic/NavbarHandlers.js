@@ -23,7 +23,7 @@ export default function NavbarHandlers() {
   };
 
   const handleProfile = () => {
-    navigate("/UserPage", { state: {user} });
+    navigate("/UserPage", { state: {user}, otherUser: false });
   };
 
   const handleHome = () => {
