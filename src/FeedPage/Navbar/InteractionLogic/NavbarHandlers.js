@@ -3,7 +3,7 @@ import { AuthContext } from "../../../AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export default function NavbarHandlers() {
-  const { darkMode, setMode, setIsLoggedIn } = useContext(AuthContext);
+  const { darkMode, setMode, setIsLoggedIn, user } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function NavbarHandlers() {
   };
 
   const handleProfile = () => {
-    navigate("/UserPage");
+    navigate("/UserPage", { state: {user} });
   };
 
   const handleHome = () => {

@@ -1,15 +1,21 @@
 import MenuComponent from "../../Navbar/MenuComponent";
 import TimeAgo from "./TimeAgo";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import userAPI from "../../../API/userAPI";
 
 function Userdetails({ name, time, profilePic }) {
+  const [user, setUser] = useState(null);
+  const handleClick = async () => {
+    setUser(await userAPI.getUser(name));
+  };
   return (
     <ul class="list-group">
       <li className="list-group-item">
         <div className="container text-center">
           <div className="row">
             <div className="col-3 text-start">
-              <Link to="/UserPage" state={{ name, profilePic }}>
+              <Link to="/UserPage" state={{ user }} onClick={handleClick}>
                 <img src={profilePic} alt="profilePic" />
               </Link>
             </div>

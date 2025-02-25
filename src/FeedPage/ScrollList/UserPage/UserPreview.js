@@ -1,16 +1,9 @@
 import UserActions from "./UserActions/UserActions";
 import ImageHelper from "../../../SignUpPage/InteractionLogic/ImageHelper";
 
-function UserPreview({ user, name, profilePic }) {
-  let userPic, nickname;
-  if (name) {
-    userPic = profilePic;
-    nickname = name;
-  } else {
-    const profilePicString = user.profilePic;
-    userPic = ImageHelper.base64ToBlobUrl(profilePicString);
-    nickname = user.nickname;
-  }
+function UserPreview({ user, otherUser }) {
+  const profilePicString = user.profilePic;
+  const userPic = ImageHelper.base64ToBlobUrl(profilePicString);
 
   return (
     <div id="userArea" className="p-2">
@@ -26,12 +19,12 @@ function UserPreview({ user, name, profilePic }) {
             />
           </div>
           <div className="col-4" id="usernameCol">
-            <h1 id="user-profile-name">{nickname}</h1>
+            <h1 id="user-profile-name">{user.nickname}</h1>
             <h6 id="user-profile-friends">{`${user.friends.length} friends`}</h6>
           </div>
         </div>
       </div>
-      {name && <UserActions />}
+      <UserActions />
     </div>
   );
 }

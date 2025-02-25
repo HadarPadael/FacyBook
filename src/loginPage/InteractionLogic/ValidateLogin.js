@@ -6,7 +6,7 @@ import { AuthContext } from "../../AuthContext";
 import userAPI from "../../API/userAPI";
 
 function ValidateLogin() {
-  const { setIsLoggedIn, setUser } = useContext(AuthContext);
+  const { setIsLoggedIn, setUser, setToken } = useContext(AuthContext);
   const [formData, setData] = useState({
     username: "",
     password: "",
@@ -18,10 +18,14 @@ function ValidateLogin() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const user = await userAPI.userLogin(formData);
+      const res = await userAPI.userLogin(formData);
+      const user = res.userExist;
+      const token = res.token;
+    
       if (user.password === formData.password) {
         setIsLoggedIn(true);
         setUser(user);
+        setToken(token);
         navigate("/Feed");
       } else {
         setError("Incorrect username and/or password");
