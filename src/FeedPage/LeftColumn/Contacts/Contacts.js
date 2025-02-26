@@ -5,7 +5,7 @@ function Contacts({ friends }) {
     <div>
       <h4 className="contacts">Contacts</h4>
       <ContactsList friends={friends} />
-    </div>
+    </div> 
   );
 }
 

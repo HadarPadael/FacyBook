@@ -10,7 +10,7 @@ function ValidateFields() {
     nickname: "",
     password: "",
     validPassword: "",
-    profilePic: "",
+    compressedPic: "",
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();

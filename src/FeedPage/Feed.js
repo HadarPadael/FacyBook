@@ -20,7 +20,7 @@ function Feed() {
             <LeftColumn user={user} />
           </div>
           <div id="PostsCol" className="col-6">
-            <PostList user={user} />
+            <PostList />
           </div>
           <div id="RightCol" className="col-3">
             <RightColumn user={user} />

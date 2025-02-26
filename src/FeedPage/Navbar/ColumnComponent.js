@@ -4,8 +4,6 @@ import ImageHelper from "../../SignUpPage/InteractionLogic/ImageHelper";
 
 function ColumnComponent({ displayPic, IconClass, displayIcon, onClick }) {
   const { user } = useContext(AuthContext);
-  const profilePicString = user.profilePic;
-  const blobUrl = ImageHelper.base64ToBlobUrl(profilePicString);
 
   return (
     <div className="col">
@@ -14,7 +12,7 @@ function ColumnComponent({ displayPic, IconClass, displayIcon, onClick }) {
           <img
             className="ProfilePic"
             id="NavbarProfilePic"
-            src={blobUrl}
+            src={user.profilePic}
             alt="profilePic"
             style={{ display: displayPic }}
           />

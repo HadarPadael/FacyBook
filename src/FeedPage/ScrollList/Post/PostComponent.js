@@ -3,7 +3,7 @@ import PostContent from "./PostContent";
 import Userdetails from "./UserDetails";
 
 function PostComponent({
-  name,
+  nickname,
   time,
   profilePic,
   content,
@@ -13,9 +13,9 @@ function PostComponent({
 }) {
   return (
     <li id="postContainer" className="card shadow-lg">
-      <div className="vstack gap-3">
+      <div className="vstack">
         <div className="p-1">
-          <Userdetails name={name} time={time} profilePic={profilePic} />
+          <Userdetails name={nickname} time={time} profilePic={profilePic} />
         </div>
         <div id="postContent" className="p-1">
           <PostContent content={content} postPic={postPic} />
@@ -26,7 +26,7 @@ function PostComponent({
             comments={comments}
             postID={postID}
             content={content}
-            name={name}
+            name={nickname}
             postPic={postPic}
           />
         </div>

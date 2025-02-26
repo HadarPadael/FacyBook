@@ -20,25 +20,6 @@ export default class ImageHelper {
     });
   }
 
-  static base64ToBlobUrl(base64, mimeType = "image/png") {
-    // If there's a data URL prefix, remove it
-    const rawBase64 = base64.replace(/^data:.*;base64,/, "");
-
-    // Decode base64 to binary
-    const byteChars = atob(rawBase64);
-    const byteNumbers = new Array(byteChars.length);
-    for (let i = 0; i < byteChars.length; i++) {
-      byteNumbers[i] = byteChars.charCodeAt(i);
-    }
-    const byteArray = new Uint8Array(byteNumbers);
-
-    // Make a Blob from the binary data
-    const blob = new Blob([byteArray], { type: mimeType });
-
-    // Turn the Blob into an object URL
-    return URL.createObjectURL(blob);
-  }
-
   /**
    * Compress a base64 image by resizing to fit within maxWidth x maxHeight
    * and converting to JPEG at a given quality.

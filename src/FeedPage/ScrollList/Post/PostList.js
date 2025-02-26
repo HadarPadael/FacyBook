@@ -1,8 +1,10 @@
 import PostComponent from "./PostComponent";
-import postData from "../mockData/posts.json";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../../../AuthContext";
 
 function PostList() {
-  const { posts } = postData;
+  const { posts } = useContext(AuthContext);
+  console.log(posts);
 
   const postL = posts.map((post, index) => {
     return <PostComponent {...post} key={index} />;

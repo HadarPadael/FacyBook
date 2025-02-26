@@ -403,6 +403,11 @@ ul {
     width: 100px;
 }
 
+#postHeaderPic {
+    height: 100px;
+    width: 100px;
+}
+
 #detailsContainer {
     background-color: transparent !important;
 }

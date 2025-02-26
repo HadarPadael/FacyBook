@@ -10,6 +10,8 @@ import { useLocation } from "react-router-dom";
 function UserPage() {
   const location = useLocation();
   const user = location.state?.user;
+  const otherUser = location.state?.otherUser;
+  console.log(user);
 
   return (
     <div className="vstack gap-2">
@@ -17,14 +19,14 @@ function UserPage() {
         <Navbar />
       </div>
       <div id="UnderNavContainer" className="p-1 text-center">
-        <UserPreview user={user} />
+        <UserPreview user={user} otherUser={otherUser}/>
         <hr></hr>
         <div className="row">
           <div id="LeftCol" className="col-3">
             <LeftColumn user={user} />
           </div>
           <div id="PostsCol" className="col-6">
-            <PostList user={user} />
+            <PostList />
           </div>
           <div id="RightCol" className="col-3">
             <RightColumn user={user} />

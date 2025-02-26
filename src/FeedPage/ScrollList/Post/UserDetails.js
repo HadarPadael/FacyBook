@@ -1,27 +1,39 @@
 import MenuComponent from "../../Navbar/MenuComponent";
 import TimeAgo from "./TimeAgo";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthContext";
 import userAPI from "../../../API/userAPI";
 
 function Userdetails({ name, time, profilePic }) {
-  const [user, setUser] = useState(null);
+
+  const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
+  let user2, otherUser;
   const handleClick = async () => {
-    setUser(await userAPI.getUser(name));
+    user2 = await userAPI.getUser(name);
+    if (user.nickname === user2.nickname) {
+      otherUser = false;
+    } else {
+      otherUser = true;
+    }
+    navigate("/UserPage", { state: { user: user2 }, otherUser });
   };
+
   return (
     <ul class="list-group">
       <li className="list-group-item">
         <div className="container text-center">
           <div className="row">
             <div className="col-3 text-start">
-              <Link
-                to="/UserPage"
-                state={{ user, otherUser: true }}
-                onClick={handleClick}
-              >
-                <img src={profilePic} alt="profilePic" />
-              </Link>
+              <button className="icon-button" onClick={handleClick}>
+                <img
+                  id="postHeaderPic"
+                  src={profilePic}
+                  alt="profilePic"
+                  className="ProfilePic"
+                />
+              </button>
             </div>
             <div className="col-8 text-start">
               <div id="detailsContainer" className="vstack">

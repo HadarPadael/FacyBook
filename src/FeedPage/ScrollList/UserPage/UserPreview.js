@@ -1,10 +1,7 @@
 import UserActions from "./UserActions/UserActions";
-import ImageHelper from "../../../SignUpPage/InteractionLogic/ImageHelper";
 
 function UserPreview({ user, otherUser }) {
-  const profilePicString = user.profilePic;
-  const userPic = ImageHelper.base64ToBlobUrl(profilePicString);
-
+ 
   return (
     <div id="userArea" className="p-2">
       <div className="cover-container">
@@ -13,7 +10,7 @@ function UserPreview({ user, otherUser }) {
           <div id="userPagePicCol" className="col-8">
             <img
               className="ProfilePic"
-              src={userPic}
+              src={user.profilePic}
               alt="Profile"
               id="profile-pic"
             />

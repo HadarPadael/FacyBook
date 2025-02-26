@@ -9,11 +9,11 @@ function HandlePic({ id, setData }) {
 
     setImage(file);
     const base64 = await ImageHelper.fileToBase64(file);
-    const compressed = await ImageHelper.compressBase64(base64, 800, 800, 0.8);
+    const compressedPic = await ImageHelper.compressBase64(base64, 800, 800, 0.8);
 
     setData((prevData) => ({
       ...prevData,
-      profilePic: compressed,
+      compressedPic,
     }));
   };
 

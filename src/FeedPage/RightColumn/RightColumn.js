@@ -1,9 +1,7 @@
 import ChoicesList from "./ChoicesList";
-import ImageHelper from "../../SignUpPage/InteractionLogic/ImageHelper";
 
 function RightColumn({user}) {
-  const profilePicString = user.profilePic;
-  const blobUrl = ImageHelper.base64ToBlobUrl(profilePicString);
+
   return (
     <ul id="rightScroll" className="list-group custom-scrollbar">
       <li className="list-group-item">
@@ -15,7 +13,7 @@ function RightColumn({user}) {
             <div className="col text-end">
               <img
                 id="infoProfilePic"
-                src={blobUrl}
+                src={user.profilePic}
                 alt="profilePic"
                 className="ProfilePic"
               />
