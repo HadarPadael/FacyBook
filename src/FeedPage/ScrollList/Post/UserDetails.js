@@ -6,18 +6,22 @@ import { AuthContext } from "../../../AuthContext";
 import userAPI from "../../../API/userAPI";
 
 function Userdetails({ name, time, profilePic }) {
-
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   let user2, otherUser;
+
   const handleClick = async () => {
-    user2 = await userAPI.getUser(name);
-    if (user.nickname === user2.nickname) {
-      otherUser = false;
-    } else {
-      otherUser = true;
+    try {
+      user2 = await userAPI.getUser(name);
+      if (user.nickname === user2.nickname) {
+        otherUser = false;
+      } else {
+        otherUser = true;
+      }
+      navigate("/UserPage", { state: { user: user2, otherUser } });
+    } catch (err) {
+      console.error(err);
     }
-    navigate("/UserPage", { state: { user: user2, otherUser }});
   };
 
   return (

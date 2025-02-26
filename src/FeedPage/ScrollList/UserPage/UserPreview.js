@@ -21,7 +21,7 @@ function UserPreview({ user, otherUser }) {
           </div>
         </div>
       </div>
-      {otherUser && <UserActions />}
+      {otherUser && <UserActions user2={user} />}
     </div>
   );
 }

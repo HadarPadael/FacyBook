@@ -1,6 +1,9 @@
 import ChoicesList from "./ChoicesList";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthContext";
 
-function RightColumn({user}) {
+function RightColumn() {
+  const { user } = useContext(AuthContext);
 
   return (
     <ul id="rightScroll" className="list-group custom-scrollbar">

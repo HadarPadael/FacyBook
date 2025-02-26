@@ -17,13 +17,13 @@ function Feed() {
       <div id="UnderNavContainer" className="p-1 text-center">
         <div className="row">
           <div id="LeftCol" className="col-3">
-            <LeftColumn user={user} />
+            <LeftColumn />
           </div>
           <div id="PostsCol" className="col-6">
             <PostList />
           </div>
           <div id="RightCol" className="col-3">
-            <RightColumn user={user} />
+            <RightColumn />
           </div>
         </div>
       </div>
