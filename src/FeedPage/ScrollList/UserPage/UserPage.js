@@ -9,9 +9,9 @@ import { useLocation } from "react-router-dom";
 
 function UserPage() {
   const location = useLocation();
-  const user = location.state?.user;
-  const otherUser = location.state?.otherUser;
-  console.log(user);
+  // const user = location.state?.user;
+  const { user, otherUser } = location.state || {};
+  console.log(otherUser);
 
   return (
     <div className="vstack gap-2">

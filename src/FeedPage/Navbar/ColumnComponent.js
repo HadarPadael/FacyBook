@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthContext";
-import ImageHelper from "../../SignUpPage/InteractionLogic/ImageHelper";
 
 function ColumnComponent({ displayPic, IconClass, displayIcon, onClick }) {
   const { user } = useContext(AuthContext);

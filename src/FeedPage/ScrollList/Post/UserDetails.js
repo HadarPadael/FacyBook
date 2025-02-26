@@ -17,7 +17,7 @@ function Userdetails({ name, time, profilePic }) {
     } else {
       otherUser = true;
     }
-    navigate("/UserPage", { state: { user: user2 }, otherUser });
+    navigate("/UserPage", { state: { user: user2, otherUser }});
   };
 
   return (
