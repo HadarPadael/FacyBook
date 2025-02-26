@@ -4,7 +4,6 @@ import FriendReq from "./FriendReq/FriendReq";
 import userAPI from "../../API/userAPI";
 import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../../AuthContext";
-import { get } from "mongoose";
 
 function isEmpty(array) {
   return array.length > 0;
@@ -28,7 +27,10 @@ function LeftColumn() {
   useEffect =
     (() => {
       getRequester(friends[friends.length - 1], setRequester);
-     return (
+    },
+    []);
+
+  return (
     <div
       className="vstack gap-2 body-tertiary px-3 mb-3 custom-scrollbar"
       id="leftScroll"
