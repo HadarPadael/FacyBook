@@ -1,8 +1,7 @@
-import { useState } from "react";
 import Contacts from "./Contacts/Contacts";
 import FriendReq from "./FriendReq/FriendReq";
 import userAPI from "../../API/userAPI";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthContext";
 
 function isEmpty(array) {
@@ -24,11 +23,9 @@ function LeftColumn() {
   const [requester, setRequester] = useState("");
   const friends = user.friendRequests;
 
-  useEffect =
-    (() => {
-      getRequester(friends[friends.length - 1], setRequester);
-    },
-    []);
+  useEffect(() => {
+    getRequester(friends[friends.length - 1], setRequester);
+  }, []);
 
   return (
     <div

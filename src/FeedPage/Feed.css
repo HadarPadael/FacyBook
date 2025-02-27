@@ -419,3 +419,21 @@ ul {
 .userActions {
     margin-right: 10%;
 }
+
+.section-container {
+    position: relative;
+    display: block;
+    margin: 1rem;
+}
+
+.toast-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    z-index: 999;
+    animation: fadeInOut 2s;
+}

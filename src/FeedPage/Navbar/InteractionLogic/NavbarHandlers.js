@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../../../AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -23,7 +23,7 @@ export default function NavbarHandlers() {
   };
 
   const handleProfile = () => {
-    navigate("/UserPage", { state: {user, otherUser: false }});
+    navigate("/UserPage", { state: { user, otherUser: false } });
   };
 
   const handleHome = () => {

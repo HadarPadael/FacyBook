@@ -96,9 +96,27 @@ export default class userAPI {
     return response.json();
   }
 
+  static async denyRequest(name, token) {
+    const response = await fetch(
+      `http://localhost:12345/api/users/${name}/friends/deny`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message);
+    }
+    return response.json();
+  }
+
   static async acceptFriendship(name, loggedName, token) {
     const response = await fetch(
-      `http://localhost:12345/api/users/${name}/friends/${loggedName}`,
+      `http://localhost:12345/api/users/${loggedName}/friends/${name}`,
       {
         method: "PATCH",
         headers: {
