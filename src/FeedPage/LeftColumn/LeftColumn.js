@@ -21,10 +21,13 @@ async function getRequester(name, setRequester) {
 function LeftColumn() {
   const { user } = useContext(AuthContext);
   const [requester, setRequester] = useState("");
-  const friends = user.friendRequests;
+  const friendReqs = user.friendRequests;
 
   useEffect(() => {
-    getRequester(friends[friends.length - 1], setRequester);
+    let name = friendReqs[friendReqs.length - 1];
+    if (name != null) {
+      getRequester(name, setRequester);
+    }
   }, []);
 
   return (
@@ -33,7 +36,7 @@ function LeftColumn() {
       id="leftScroll"
     >
       <div className="p-2">
-        {isEmpty(user.friendRequests) && <FriendReq friendReq={requester} />}
+        {isEmpty(friendReqs) && <FriendReq friendReq={requester} />}
       </div>
       <hr></hr>
       <div className="p-2">

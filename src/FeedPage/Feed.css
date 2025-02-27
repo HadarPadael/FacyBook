@@ -437,3 +437,13 @@ ul {
     z-index: 999;
     animation: fadeInOut 2s;
 }
+
+#contactPic {
+    width: 100px;
+    height: 100px;
+}
+
+#contactName {
+    font-weight: bold;
+    font-size: larger;
+}

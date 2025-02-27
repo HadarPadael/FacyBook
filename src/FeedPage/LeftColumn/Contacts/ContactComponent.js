@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import userAPI from "../../../API/userAPI";
 
 function ContactComponent({ name }) {
-  let user, profilePic;
+  let user;
+  const [profilePic, setProfilePic] = useState("");
   async function fetchUser(name) {
     try {
       user = await userAPI.getUser(name);
-      profilePic = user.profilePic;
+      setProfilePic(user.profilePic);
     } catch (err) {
       console.log(err);
     }
@@ -20,10 +21,20 @@ function ContactComponent({ name }) {
     <li className="list-group-item">
       <div className="container text-center">
         <div className="row">
-          <div className="col text-start">
-            <img src={profilePic} alt="profilePic" />
+          <div className="col-3 text-start">
+            <img
+              className="ProfilePic"
+              id="contactPic"
+              src={profilePic}
+              alt="profilePic"
+            />
           </div>
-          <div className="col text-start">{name}</div>
+          <div
+            className="col-6 d-flex align-items-center justify-content-center"
+            id="contactName"
+          >
+            {name}
+          </div>
         </div>
       </div>
     </li>
