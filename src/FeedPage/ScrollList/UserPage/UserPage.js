@@ -4,12 +4,15 @@ import Navbar from "../../Navbar/Navbar";
 import RightColumn from "../../RightColumn/RightColumn";
 import PostList from "../Post/PostList";
 import UserPreview from "./UserPreview";
-
 import { useLocation } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthContext";
 
 function UserPage() {
   const location = useLocation();
   const { user, otherUser } = location.state || {};
+  const { userPosts } = useContext(AuthContext);
+  console.log(`posts: ${userPosts}`);
 
   return (
     <div className="vstack gap-2">
@@ -17,14 +20,17 @@ function UserPage() {
         <Navbar />
       </div>
       <div id="UnderNavContainer" className="p-1 text-center">
-        <UserPreview user={user} otherUser={otherUser}/>
+        <UserPreview user={user} otherUser={otherUser} />
         <hr></hr>
         <div className="row">
           <div id="LeftCol" className="col-3">
             <LeftColumn user={user} />
           </div>
           <div id="PostsCol" className="col-6">
-            <PostList />
+            <PostList
+              posts={userPosts}
+              message={"Become friends to view posts!"}
+            />
           </div>
           <div id="RightCol" className="col-3">
             <RightColumn user={user} />

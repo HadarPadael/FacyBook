@@ -8,6 +8,7 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const [posts, setPosts] = useState(null);
+  const [userPosts, setUserPosts] = useState(null);
 
   return (
     <AuthContext.Provider
@@ -22,6 +23,8 @@ export function AuthProvider({ children }) {
         setToken,
         posts,
         setPosts,
+        userPosts,
+        setUserPosts
       }}
     >
       {children}

@@ -91,7 +91,7 @@ h3 {
     width: 80%;
     height: 5%;
     align-self: center;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-bottom: 10px;
     padding: 15px;
     margin-left: 8%;
@@ -163,6 +163,7 @@ ul {
     height: 450px;
     position: sticky;
     top: 15%;
+
 }
 
 #rightScroll {
@@ -446,4 +447,13 @@ ul {
 #contactName {
     font-weight: bold;
     font-size: larger;
+    background-color: transparent !important;
+}
+
+#LeftCol {
+    background-color: white;
+}
+
+#RightCol {
+    background-color: white;
 }

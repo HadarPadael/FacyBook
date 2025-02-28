@@ -60,6 +60,21 @@ export default class userAPI {
     return response.json();
   }
 
+  static async getFriendsPosts(name, token) {
+    const response = await fetch(`http://localhost:12345/api/users/${name}/posts`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.message);
+    }
+    return response.json();
+  }
+
   static async askToBeFriend(name, token) {
     const response = await fetch(
       `http://localhost:12345/api/users/${name}/friends`,

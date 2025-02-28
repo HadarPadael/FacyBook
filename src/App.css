@@ -38,6 +38,26 @@ body.dark-mode .card {
     border-color: white;
 }
 
+body.dark-mode #LeftCol *{
+    background-color: #1f1f1f !important;
+}
+
+body.dark-mode #LeftCol {
+    background-color: #1f1f1f !important;
+}
+
+body.dark-mode #RightCol {
+    background-color: #1f1f1f !important;
+}
+
+body.dark-mode #RightCol * {
+    background-color: #1f1f1f !important;
+}
+
+body.dark-mode #LeftCol #contactName{
+    background-color: transparent !important;
+}
+
 #logoPic {
     width: 80px;
     padding: 10px;

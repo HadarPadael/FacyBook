@@ -7,7 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
 
 function Feed() {
-  const { user } = useContext(AuthContext);
+  const { posts } = useContext(AuthContext);
 
   return (
     <div className="vstack gap-2">
@@ -20,7 +20,7 @@ function Feed() {
             <LeftColumn />
           </div>
           <div id="PostsCol" className="col-6">
-            <PostList />
+            <PostList posts={posts} message={"No available posts"}/>
           </div>
           <div id="RightCol" className="col-3">
             <RightColumn />

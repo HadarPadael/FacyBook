@@ -1,9 +1,10 @@
 import React, { useContext, useEffect } from "react";
 import { AuthContext } from "../../../AuthContext";
 import { useNavigate } from "react-router-dom";
+import userAPI from "../../../API/userAPI";
 
 export default function NavbarHandlers() {
-  const { darkMode, setMode, setIsLoggedIn, user } = useContext(AuthContext);
+  const { darkMode, setMode, setIsLoggedIn, user, setUserPosts, token } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -22,7 +23,10 @@ export default function NavbarHandlers() {
     setMode(!darkMode);
   };
 
-  const handleProfile = () => {
+  const handleProfile = async () => {
+    let posts;
+    posts = await userAPI.getFriendsPosts(user.nickname, token);
+    setUserPosts(posts);
     navigate("/UserPage", { state: { user, otherUser: false } });
   };
 

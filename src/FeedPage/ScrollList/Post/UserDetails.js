@@ -1,18 +1,20 @@
 import MenuComponent from "../../Navbar/MenuComponent";
 import TimeAgo from "./TimeAgo";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../../AuthContext";
 import userAPI from "../../../API/userAPI";
 
 function Userdetails({ name, time, profilePic }) {
-  const { user } = useContext(AuthContext);
+  const { user, token, setUserPosts } = useContext(AuthContext);
   const navigate = useNavigate();
-  let user2, otherUser;
+  let user2, otherUser, postsL;
 
   const handleClick = async () => {
     try {
       user2 = await userAPI.getUser(name);
+      postsL = await userAPI.getFriendsPosts(user2.nickname, token);
+      setUserPosts(postsL);
       if (user.nickname === user2.nickname) {
         otherUser = false;
       } else {
