@@ -1,19 +1,32 @@
 import InteractionComponent from "./InteractionComponent";
 import MenuComponent from "../../../Navbar/MenuComponent";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import postAPI from "../../../../API/postAPI";
+import { AuthContext } from "../../../../AuthContext";
 
-function InteractionsList({
-  comments,
-  postID,
-  name,
-  content,
-  postPic,
-}) {
-  const [isLiked, setLike] = useState(false);
+function InteractionsList({ comments, postID, name, content, postPic, likes }) {
+  const { user } = useContext(AuthContext);
+  const loggedName = user.nickname;
+  const [isLiked, setLike] = useState(Like());
 
-  const handleLike = (event) => {
-    setLike(!isLiked);
+  const handleLike = async () => {
+    try {
+      console.log(likes);
+      setLike(!isLiked);
+      if (isLiked) {
+        likes.push(loggedName);
+      } else {
+        likes = likes.filter((like) => like !== loggedName);
+      }
+      await postAPI.updateLikes(loggedName, postID, likes);
+    } catch (err) {
+      console.log(err);
+    }
   };
+
+  function Like() {
+    return likes.includes(loggedName);
+  }
 
   const Interactions = [
     {

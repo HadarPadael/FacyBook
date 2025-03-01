@@ -3,8 +3,9 @@ import LeftColumn from "./LeftColumn/LeftColumn";
 import Navbar from "./Navbar/Navbar";
 import RightColumn from "./RightColumn/RightColumn";
 import PostList from "./ScrollList/Post/PostList";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../AuthContext";
+import postAPI from "../API/postAPI";
 
 function Feed() {
   const { posts } = useContext(AuthContext);
@@ -20,7 +21,7 @@ function Feed() {
             <LeftColumn />
           </div>
           <div id="PostsCol" className="col-6">
-            <PostList posts={posts} message={"No available posts"}/>
+            <PostList posts={posts} message={"No available posts"} />
           </div>
           <div id="RightCol" className="col-3">
             <RightColumn />

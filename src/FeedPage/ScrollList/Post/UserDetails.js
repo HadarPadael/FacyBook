@@ -4,13 +4,16 @@ import { useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../AuthContext";
 import userAPI from "../../../API/userAPI";
+import PostHandlers from "./PostHandlers";
 
-function Userdetails({ name, time, profilePic }) {
+function Userdetails({ name, time, profilePic, postID }) {
   const { user, token, setUserPosts } = useContext(AuthContext);
+  const { handleDelete } = PostHandlers(name, postID);
   const navigate = useNavigate();
   let user2, otherUser, postsL;
 
-  const handleClick = async () => {
+  const handleClick = async (event) => {
+    event.preventDefault();
     try {
       user2 = await userAPI.getUser(name);
       postsL = await userAPI.getFriendsPosts(user2.nickname, token);
@@ -53,14 +56,18 @@ function Userdetails({ name, time, profilePic }) {
                 </div>
               </div>
             </div>
-            <div className="col-1 text-start">
-              <MenuComponent
-                option1={"Edit"}
-                option2={"Tag"}
-                option3={"Delete"}
-                icon={"bi bi-three-dots"}
-              />
-            </div>
+            {user.nickname === name && (
+              <div className="col-1 text-start">
+                <MenuComponent
+                  option1={"Edit"}
+                  option2={"Tag"}
+                  option3={"Delete"}
+                  icon={"bi bi-three-dots"}
+                  link3={window.location.pathname}
+                  handler={handleDelete}
+                />
+              </div>
+            )}
           </div>
         </div>
       </li>

@@ -10,12 +10,18 @@ function PostComponent({
   postPic,
   comments,
   postID,
+  likes,
 }) {
   return (
     <li id="postContainer" className="card shadow-lg">
       <div className="vstack">
         <div className="p-1">
-          <Userdetails name={nickname} time={time} profilePic={profilePic} />
+          <Userdetails
+            name={nickname}
+            time={time}
+            profilePic={profilePic}
+            postID={postID}
+          />
         </div>
         <div id="postContent" className="p-1">
           <PostContent content={content} postPic={postPic} />
@@ -28,6 +34,7 @@ function PostComponent({
             content={content}
             name={nickname}
             postPic={postPic}
+            likes={likes}
           />
         </div>
       </div>

@@ -12,8 +12,7 @@ function UserPage() {
   const location = useLocation();
   const { user, otherUser } = location.state || {};
   const { userPosts } = useContext(AuthContext);
-  console.log(`posts: ${userPosts}`);
-
+  
   return (
     <div className="vstack gap-2">
       <div className="p-2">

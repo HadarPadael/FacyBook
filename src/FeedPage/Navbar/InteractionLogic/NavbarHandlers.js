@@ -15,22 +15,26 @@ export default function NavbarHandlers() {
     }
   }, [darkMode]);
 
-  const handleLogOut = () => {
+  const handleLogOut = (event) => {
+    event.preventDefault();
     setIsLoggedIn(false);
   };
 
-  const handleModeSwitch = () => {
+  const handleModeSwitch = (event) => {
+    event.preventDefault();
     setMode(!darkMode);
   };
 
-  const handleProfile = async () => {
+  const handleProfile = async (event) => {
+    event.preventDefault();
     let posts;
     posts = await userAPI.getFriendsPosts(user.nickname, token);
     setUserPosts(posts);
     navigate("/UserPage", { state: { user, otherUser: false } });
   };
 
-  const handleHome = () => {
+  const handleHome = (event) => {
+    event.preventDefault();
     navigate("/Feed");
   };
 
