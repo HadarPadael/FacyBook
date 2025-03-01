@@ -35,7 +35,7 @@ The Facybook project is built with React, leveraging JSX for UI components and C
 ## Setup and Running
 - Clone the Repository:
   ```bash
-  git clone https://github.com/HadarPadael/facybook.git
+  git clone https://github.com/HadarPadael/FacyBook.git
   cd facybook
   ```
 - Install Dependencies:
