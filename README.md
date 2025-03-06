@@ -58,7 +58,7 @@ node app.js
 
 - Access the App:
   * If you're in user mode:
-    Open your browser and navigate to http://localhost:12345 to see Facybook in action.
+    Open your browser and navigate to http://localhost:PORT (PORT should be specified in the facyBook-server .env file) to see Facybook in action.
   * Otherwise, the react should automaticlly open the app in the browser in development mode.
 
 ## API Communication
