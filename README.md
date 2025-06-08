@@ -54,7 +54,7 @@ Backend: Retrieve the server from its own repository and start it in a separate 
 ```bash
 node app.js
 ```
-(I personally prefer nodemon for development, intall it and run "nodemon start")
+(I personally prefer nodemon for development, install it and run "nodemon start")
 
 - Access the App:
   * If you're in user mode:
