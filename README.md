@@ -44,36 +44,37 @@ The Facybook project is built with React, leveraging JSX for UI components and C
   npm install
   ```
 - Start the Application:
-* **Development**:
   
-  1) Run the React application:
-  ```bash
-  npm start
-  ```
-  This will automatically open a react development server in a new tab in your default browser.
-  If you simply want to alter the design without use of data fetched by the server, this alone will do.
-  Otherwise, follow the next step:
-
-  2) Retrieve the server from its own repository and start it in a separate terminal (for side-by-side development):
-  ```bash
-  nodemon start
-  ```
-* **production**:
-  
-  1) In the server terminal run:
-  ```bash
-  node app.js
-  ```
-  This will use the build files that already exist in the servers' "public" directory.
-  
-  1.1) If you wish to use your build files after preforming changes in the react enviornment,
-  simply run (in the React enviornment):
-  ```bash
-  npm run build
-  ```
-  and replace the existing build files with the newly created ones.
-
-  2) To see Facybook in action after preforming step 1, open your browser and navigate to http://localhost:PORT (PORT should be specified in the facyBook-server output            to terminal)
+   **Development**:
+     
+     1) Run the React application:
+     ```bash
+     npm start
+     ```
+     This will automatically open a react development server in a new tab in your default browser.
+     If you simply want to alter the design without use of data fetched by the server, this alone will do.
+     Otherwise, follow the next step:
+   
+     2) Retrieve the server from its own repository and start it in a separate terminal (for side-by-side development):
+     ```bash
+     nodemon start
+     ```
+    **production**:
+     
+     1) In the server terminal run:
+     ```bash
+     node app.js
+     ```
+     This will use the build files that already exist in the servers' "public" directory.
+     
+     1.1) If you wish to use your build files after preforming changes in the react enviornment,
+     simply run (in the React enviornment):
+     ```bash
+     npm run build
+     ```
+     and replace the existing build files with the newly created ones.
+   
+     2) To see Facybook in action after preforming step 1, open your browser and navigate to http://localhost:PORT (PORT should be specified in the facyBook-server output            to terminal)
 
 ## API Communication
 The Facybook app interacts with a Node.js server through API calls. The server handles user authentication, account management, and data retrieval for the feed. Ensure that the backend is running before interacting with the app to enable smooth API communication.
