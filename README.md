@@ -67,7 +67,7 @@ The Facybook project is built with React, leveraging JSX for UI components and C
      ```
      This will use the build files that already exist in the servers' "public" directory.
      
-     1.1) If you wish to use your build files after preforming changes in the react enviornment,
+     If you wish to use your build files after preforming changes in the react enviornment,
      simply run (in the React enviornment):
      ```bash
      npm run build
