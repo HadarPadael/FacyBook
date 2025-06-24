@@ -79,5 +79,9 @@ The Facybook project is built with React, leveraging JSX for UI components and C
 ## API Communication
 The Facybook app interacts with a Node.js server through API calls. The server handles user authentication, account management, and data retrieval for the feed. Ensure that the backend is running before interacting with the app to enable smooth API communication.
 
+## Video Preview 
+You're welcome to watch https://drive.google.com/file/d/1HQBm7AC2J0Q8Ii1V5-pQvPtTWtEHii6P/view?usp=sharing for a breif preview of FacyBooks functionality!
+
 ## Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any feature enhancements or bug fixes.
+
