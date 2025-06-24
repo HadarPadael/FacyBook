@@ -14,7 +14,7 @@ function UserPage() {
   const { userPosts } = useContext(AuthContext);
   let message;
 
-  if (otherUser.nickname == null) {
+  if (otherUser === false) {
     message = "Post something new!";
   } else {
     message = "Become friends to view posts!";
