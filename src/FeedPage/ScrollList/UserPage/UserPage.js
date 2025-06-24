@@ -12,7 +12,14 @@ function UserPage() {
   const location = useLocation();
   const { user, otherUser } = location.state || {};
   const { userPosts } = useContext(AuthContext);
-  
+  let message;
+
+  if (otherUser.nickname == null) {
+    message = "Post something new!";
+  } else {
+    message = "Become friends to view posts!";
+  }
+
   return (
     <div className="vstack gap-2">
       <div className="p-2">
@@ -26,10 +33,7 @@ function UserPage() {
             <LeftColumn user={user} />
           </div>
           <div id="PostsCol" className="col-6">
-            <PostList
-              posts={userPosts}
-              message={"Become friends to view posts!"}
-            />
+            <PostList posts={userPosts} message={message} />
           </div>
           <div id="RightCol" className="col-3">
             <RightColumn user={user} />

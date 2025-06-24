@@ -1,14 +1,14 @@
 function CommentBar() {
   return (
     <form className="row">
-      <div className="col-2">
+      <div className="col-3">
         <img
           className="add-comment-pic"
           id="profilePic"
           src="/profilePic.jpg"
         />
       </div>
-      <div className="col-10">
+      <div className="col-9">
         <div className="input-group">
             {/*once a server connection is made, implemet comment addition */}
           <input
