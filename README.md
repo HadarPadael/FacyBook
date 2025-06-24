@@ -44,7 +44,7 @@ The Facybook project is built with React, leveraging JSX for UI components and C
   npm install
   ```
 - Start the Application:
-  *Development:
+  * **Development**:
   1) Run the React application:
   ```bash
   npm start
@@ -57,7 +57,7 @@ The Facybook project is built with React, leveraging JSX for UI components and C
   ```bash
   nodemon start
   ```
-  *production:
+  * **production**:
   1) In the server terminal run:
   ```bash
   node app.js
