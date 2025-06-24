@@ -35,7 +35,7 @@ function ValidateLogin() {
       }
     } catch (err) {
       console.error(err);
-      setError("Incorrect username and/or password");
+      setError("Error in login");
     }
   };
 
